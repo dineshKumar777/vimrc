@@ -16,6 +16,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-signify'
 call plug#end()
 
+"this is a test
 set number
 set mouse=a
 syntax on
