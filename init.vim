@@ -23,7 +23,6 @@ filetype plugin indent on
 set clipboard=unnamedplus
 
 " Theme settings
-" this is a test comment
 set t_co=256
 set background=dark
 set termguicolors
