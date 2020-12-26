@@ -114,6 +114,10 @@ nnoremap <silent> <leader>g :GFiles<cr>
 nnoremap <silent> <leader>h :History<cr>
 nnoremap <silent> <leader>b :Buffers<cr>
 
+" Copy or delete all lines in buffer
+nnoremap <F5> :%y+<CR>
+nnoremap <F6> :%d+<CR>
+
 " Tab configuration
 " Go to last active tab
 au TabLeave * let g:lasttab = tabpagenr()
