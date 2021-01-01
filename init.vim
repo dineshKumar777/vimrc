@@ -14,6 +14,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typ
 Plug 'dikiaap/minimalist'
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-signify'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 set number
@@ -66,7 +68,6 @@ nnoremap <Leader>vv  :edit    $MYVIMRC<CR>
 " For NERDTree
 let g:NERDSpaceDelims = 1 
 let g:NERDTreeIgnore = ['\~$', 'node_modules']
-
 
 " Lightline vim
 set noshowmode " ignore the --Insert-- message
@@ -127,10 +128,10 @@ vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
 " Prettier configuration
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 1
-let g:prettier#autoformat_config_files = ['.prettierrc.json', '.prettierrc']
-let g:prettier#quickfix_enabled = 0
-let g:prettier#quickfix_enabled = 0
-let g:prettier#config#tab_width ='auto'
+let g:prettier#autoformat_config_files   = ['.prettierrc.json', '.prettierrc']
+let g:prettier#quickfix_enabled          = 0
+let g:prettier#quickfix_enabled          = 0
+let g:prettier#config#tab_width          = 'auto'
 
 "use this as a reference. You can call this command using :All
 "But this is not used in config
@@ -153,3 +154,10 @@ function! MyFind(numArg, qArg, bangArg)
 		\ a:bangArg)
 endfunction
 
+
+" easy align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
